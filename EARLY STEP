@@ -1,0 +1,10 @@
+yarn init -y
+yarn add express
+yarn add nodemon -dev
+yarn add body-parser
+add ---->>>>
+scripts": {
+		"start": "node index.js",
+		"development": "nodemon index.js"
+	},
+=======================================================
