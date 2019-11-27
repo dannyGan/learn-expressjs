@@ -1,7 +1,8 @@
 const express = require("express"); // import express library
-const app = express(); // initialize express app
 const bodyParser = require("body-parser");
+const cors = require("cors");
 
+const app = express(); // initialize express app
 const port = process.env.PORT || 3000;
 console.log(true);
 
@@ -20,6 +21,7 @@ let movies = [
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(cors());
 
 // setup a `/` endpoint
 app.get("/", (req, res, next) => res.send("<h1>Welcome Danny!</h1>"));
